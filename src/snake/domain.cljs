@@ -39,7 +39,7 @@
 
 
 (defn- head-position [game]
-  (last (:snake game)))
+  (first (:snake game)))
 
 
 (defmulti move-position (fn [direction position] direction))
@@ -82,4 +82,3 @@
       (start-position start-x start-y)
       (change-direction direction)
       add-food))
-
