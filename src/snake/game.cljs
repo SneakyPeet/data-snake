@@ -35,6 +35,7 @@
 
 (def new-game
   (let [state (d/start-game 20 10 0 :down)
-        possible-actions [(move-action :move-left state)
+        possible-actions [(move-action :move-down state)
+                          (move-action :move-left state)
                           (move-action :move-right state)]]
     (e/game state possible-actions)))
