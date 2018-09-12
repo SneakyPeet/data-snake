@@ -39,7 +39,7 @@
 
 
 (defn- head-position [game]
-  (first (:snake game)))
+  (last (:snake game)))
 
 
 (defmulti move-position (fn [direction position] direction))

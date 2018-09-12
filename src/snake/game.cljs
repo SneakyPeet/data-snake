@@ -33,7 +33,7 @@
   (execute-move game-state :right :move-right :move-up :move-down))
 
 
-(def new-game
+(defn new-game []
   (let [state (d/start-game 20 10 0 :down)
         possible-actions [(move-action :move-down state)
                           (move-action :move-left state)
