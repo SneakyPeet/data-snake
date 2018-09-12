@@ -18,6 +18,10 @@
 
   :source-paths ["src"]
 
+  :aliases {"build" ["do"
+                     "clean"
+                     ["cljsbuild" "once" "min"]]}
+
   :cljsbuild {:builds
               [{:id "dev"
                 :source-paths ["src"]
@@ -47,7 +51,7 @@
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/snake.js"
                            :main snake.core
-                           :optimizations :advanced
+                           :optimizations :whitespace
                            :pretty-print false}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
